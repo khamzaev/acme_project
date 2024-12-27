@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
+  <h1>Список дней рождения</h1>
   {% for birthday in birthdays %}
     <div>
       <div>
@@ -13,5 +14,7 @@
         <hr>
       {% endif %}
     </div>
+  {% empty %}
+    <p>Список пуст.</p>
   {% endfor %}
 {% endblock %}
